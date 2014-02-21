@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B130E302-3154-4E8A-B032-C2467A55AB0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arcnet.Xml.Linq.NFe</RootNamespace>
+    <AssemblyName>Arcnet.Xml.Linq.NFe</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.8.3\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.8.3\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XDocumentNFe.cs" />
+    <Compile Include="XElements\InfNFe\Destinatario.cs" />
+    <Compile Include="XElements\InfNFe\Emitente.cs" />
+    <Compile Include="XElements\InfNFe\Endereco.cs" />
+    <Compile Include="XElements\InfNFe\Ide.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\COFINSElements\COFINS.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\COFINSElements\COFINSAliq.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\COFINSElements\COFINSNT.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\COFINSElements\COFINSOutr.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\COFINSElements\COFINSST.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS00.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS10.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS20.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS30.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS40.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS51.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS60.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS70.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMS90.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSPart.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSSN101.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSSN102.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSSN201.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSSN202.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSSN500.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSSN900.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\ICMSElements\ICMSST.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\IIElements\II.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\Imposto.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\IPIElements\IPI.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\IPIElements\IPIBase.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\IPIElements\IPINT.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\IPIElements\IPITrib.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\PISElements\PIS.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\PISElements\PISAliq.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\PISElements\PISNT.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\PISElements\PISOutr.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\PISElements\PISQtde.cs" />
+    <Compile Include="XElements\InfNFe\Impostos\PISElements\PISST.cs" />
+    <Compile Include="XElements\InfNFe\Produto.cs" />
+    <Compile Include="XElements\InfNFe\TotalElements\ICMSTotal.cs" />
+    <Compile Include="XElements\InfNFe\TotalElements\Total.cs" />
+    <Compile Include="XElements\ProtNFe\InfProt.cs" />
+    <Compile Include="XElements\Transporta\Reboque.cs" />
+    <Compile Include="XElements\Transporta\Transp.cs" />
+    <Compile Include="XElements\Transporta\Transporta.cs" />
+    <Compile Include="XElements\Transporta\VeicTransp.cs" />
+    <Compile Include="XElements\Transporta\Vol.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
